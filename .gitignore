@@ -31,3 +31,15 @@ coverage/
 
 # Optional: local OpenClaw / Moltbot
 .openclaw/
+
+# Rust build artifacts
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Holochain artifacts
+workdir/
+*.happ
+*.dna
+.hc*
+*.wasm
