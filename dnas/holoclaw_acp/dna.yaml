@@ -1,0 +1,16 @@
+---
+manifest_version: "1"
+name: holoclaw_acp
+integrity:
+  network_seed: ~
+  properties: ~
+  origin_time: 2024-01-01T00:00:00.000000Z
+  zomes:
+    - name: acp_integrity
+      bundled: ../../target/wasm32-unknown-unknown/release/acp_integrity.wasm
+coordinator:
+  zomes:
+    - name: acp_coordinator
+      bundled: ../../target/wasm32-unknown-unknown/release/acp_coordinator.wasm
+      dependencies:
+        - name: acp_integrity
